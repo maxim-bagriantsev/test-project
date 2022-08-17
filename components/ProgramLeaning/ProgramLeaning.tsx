@@ -1,9 +1,9 @@
 import React, {ReactElement} from 'react';
-import ModuleProgramLeaning from "@UI/ModuleProgramLeaning/ModuleProgrammLeaning";
-import styles from './ProgramLeaning.module.scss'
+import ModuleProgramLeaning from '@UI/ModuleProgramLeaning/ModuleProgrammLeaning';
+import styles from './ProgramLeaning.module.scss';
 import classNames from 'classnames/bind';
 
-const cx = classNames.bind(styles)
+const cx = classNames.bind(styles);
 
 export default function ProgramLeaning(): ReactElement {
 

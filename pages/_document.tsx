@@ -4,6 +4,7 @@ import Document, {
     Head,
     Main,
     NextScript,
+  // eslint-disable-next-line no-unused-vars
     DocumentInitialProps,
 } from 'next/document';
 

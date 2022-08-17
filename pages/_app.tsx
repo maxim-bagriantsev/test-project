@@ -1,13 +1,15 @@
 import React from 'react';
-import wrapper from '@store';
+import {wrapper} from '@store';
 import '../asserts/scss/global.scss';
-
+import { ConnectedRouter } from 'connected-next-router';
 
 function MyApp({ Component, pageProps }: any) {
 
-    return (
+  return (
     <React.StrictMode>
-                <Component {...pageProps} />
+      <ConnectedRouter>
+        <Component {...pageProps} />
+      </ConnectedRouter>
     </React.StrictMode>
   );
 }

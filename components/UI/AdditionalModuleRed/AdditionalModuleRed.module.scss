@@ -1,5 +1,5 @@
-@import '../../../asserts/scss/colors';
-
+@import 'asserts/scss/colors';
+@import 'asserts/scss/screens';
 
 .additionalModuleRed {
   width: 630px;
@@ -9,12 +9,25 @@
   color: $color-white;
   position: relative;
   margin-right: 30px;
+  margin-bottom: 0;
+
+  @media screen and (max-width: $mobile) {
+    width: auto;
+    margin-right: 0;
+    padding: 31px 17px 41px 17px;
+    margin-bottom: 23px;
+  }
 
   &__title {
     font-size: 36px;
     line-height: 43px;
     font-weight: 700;
     margin-bottom: 24px;
+
+    @media screen and (max-width: $mobile) {
+      font-size: 25px;
+      line-height: 30px;
+    }
   }
 
   &__text {
@@ -22,9 +35,12 @@
     line-height: 26px;
     font-weight: 300;
     width: 400px;
+
+    @media screen and (max-width: $mobile) {
+      margin-bottom: 24px;
+      width: auto;
+    }
   }
-
-
 }
 
 .additionalModuleRed:after {
@@ -35,4 +51,8 @@
   border-width: 0 43px 43px 0;
   border-style: solid;
   border-color: $color-red-dark #fff;
+
+  @media screen and (max-width: $mobile) {
+    border-width: 0 26px 26px 0;
+  }
 }

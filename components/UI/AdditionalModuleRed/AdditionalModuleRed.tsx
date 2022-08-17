@@ -1,8 +1,8 @@
 import React, {FC} from 'react';
-import styles from './AdditionalModuleRed.module.scss'
-import classNames from "classnames/bind";
+import styles from './AdditionalModuleRed.module.scss';
+import classNames from 'classnames/bind';
 
-const cx = classNames.bind(styles)
+const cx = classNames.bind(styles);
 
 export const AdditionalModuleRed: FC = () => {
     return (

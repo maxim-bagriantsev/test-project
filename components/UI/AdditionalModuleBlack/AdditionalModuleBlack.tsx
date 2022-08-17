@@ -1,8 +1,8 @@
 import React, {FC} from 'react';
-import styles from './AdditionalModuleBlack.module.scss'
-import classNames from "classnames/bind";
+import styles from './AdditionalModuleBlack.module.scss';
+import classNames from 'classnames/bind';
 
-const cx = classNames.bind(styles)
+const cx = classNames.bind(styles);
 
 export const AdditionalModuleBlack: FC = () => {
     return (
@@ -23,7 +23,6 @@ export const AdditionalModuleBlack: FC = () => {
                     </div>
                 </ul>
             </div>
-
         </div>
     );
 };
