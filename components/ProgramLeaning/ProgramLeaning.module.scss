@@ -1,0 +1,29 @@
+@import '../../asserts/scss/screens';
+
+.programLeaning {
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+
+  &__title {
+    font-size: 26px;
+    font-weight: 700;
+    line-height: 31px;
+    margin-bottom: 54px;
+
+    @media screen and (max-width: $mobile) {
+      font-size: 22px;
+      font-weight: 700;
+      line-height: 26px;
+      margin-bottom: 0;
+    }
+  }
+
+  &__wrapper {
+    display: flex;
+
+    @media screen and (max-width: $mobile) {
+      flex-direction: column;
+    }
+  }
+}

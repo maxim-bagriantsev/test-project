@@ -1,0 +1,60 @@
+@import 'asserts/scss/colors';
+@import 'asserts/scss/screens';
+
+.moduleProgramLeaning {
+  width: 600px;
+
+  @media screen and (max-width: $mobile) {
+    width: auto;
+  }
+
+  &__borderline {
+    width: 140px;
+    border: 1px solid $color-red;
+    margin-bottom: 30px;
+  }
+
+  .moduleItem {
+    display: flex;
+
+    &__title {
+      margin-right: 30px;
+      font-size: 32px;
+      font-weight: 400;
+      line-height: 38px;
+    }
+
+    &__list {
+      font-size: 16px;
+      line-height: 19px;
+      font-weight: 300;
+
+      .listItem {
+        width: 300px;
+        display: flex;
+        justify-content: space-between;
+        position: relative;
+        margin-bottom: 10px;
+
+        &__tod {
+          position: absolute;
+          top: 5px;
+          left: -15px;
+          width: 5px;
+          height: 5px;
+
+          background: $color-red;
+          border-radius: 50%;
+        }
+
+        &__text {
+
+        }
+      }
+    }
+  }
+
+  &:nth-child(1) {
+    margin-right: 45px;
+  }
+}

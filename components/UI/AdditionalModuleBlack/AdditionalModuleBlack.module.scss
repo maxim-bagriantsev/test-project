@@ -1,0 +1,71 @@
+@import '../../../asserts/scss/colors';
+
+
+.additionalModuleBlack {
+  width: 630px;
+  max-height: 295px;
+  background-color: $color-black;
+  padding: 56px 110px 90px 70px;
+  color: $color-white;
+  position: relative;
+
+  &__title {
+    font-size: 36px;
+    line-height: 43px;
+    font-weight: 700;
+    margin-bottom: 24px;
+  }
+
+  &__text {
+    font-size: 20px;
+    line-height: 26px;
+    font-weight: 300;
+    width: 400px;
+  }
+
+
+  &__list {
+    font-size: 20px;
+    line-height: 26px;
+    font-weight: 300;
+    left: 0;
+    right: 0;
+    padding-left: 15px;
+    margin: 0;
+
+    .listItem {
+      //width: 300px;
+      display: flex;
+      justify-content: space-between;
+      position: relative;
+      margin-bottom: 10px;
+
+      &__tod {
+        position: absolute;
+        top: 5px;
+        left: -15px;
+        width: 5px;
+        height: 5px;
+
+        background: $color-red;
+        border-radius: 50%;
+      }
+
+      &__text {
+
+      }
+    }
+  }
+
+
+}
+
+.additionalModule:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  border-width: 0 43px 43px 0;
+  border-style: solid;
+  border-color: $color-red-dark #fff;
+}

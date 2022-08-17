@@ -1,0 +1,38 @@
+@import '../../../asserts/scss/colors';
+
+
+.additionalModuleRed {
+  width: 630px;
+  max-height: 295px;
+  background-color: $color-red;
+  padding: 56px 110px 90px 70px;
+  color: $color-white;
+  position: relative;
+  margin-right: 30px;
+
+  &__title {
+    font-size: 36px;
+    line-height: 43px;
+    font-weight: 700;
+    margin-bottom: 24px;
+  }
+
+  &__text {
+    font-size: 20px;
+    line-height: 26px;
+    font-weight: 300;
+    width: 400px;
+  }
+
+
+}
+
+.additionalModuleRed:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  border-width: 0 43px 43px 0;
+  border-style: solid;
+  border-color: $color-red-dark #fff;
+}

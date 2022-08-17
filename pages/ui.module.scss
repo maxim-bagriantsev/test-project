@@ -1,0 +1,16 @@
+@import '../asserts/scss/colors';
+@import '../asserts/scss/helpers/helpers';
+
+.container {
+  display: flex;
+  //width: 400px;
+  flex-direction: column;
+  justify-content: space-around;
+  min-height: 100vh;
+  padding: 50px;
+  overflow-x: hidden;
+}
+
+.bg_black {
+  background-color: #000;
+}
