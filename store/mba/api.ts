@@ -10,10 +10,10 @@ export const mbaApi = createApi({
         products: build.query<IProduct[], string>({
             query: (products: string) => ({
                 url: 'products',
-                params: {
+                // params: {
                     // G: products
                     // page : 10
-                }
+                // }
             }),
             transformResponse: (response: ServerResponse<IProduct>) => response.items
         })
