@@ -4,6 +4,7 @@ import styles from './ui.module.scss';
 import ProgramLeaning from '@components/ProgramLeaning/ProgramLeaning';
 import {AdditionalModuleRed} from '@UI/AdditionalModuleRed/AdditionalModuleRed';
 import {AdditionalModuleBlack} from '@UI/AdditionalModuleBlack/AdditionalModuleBlack';
+import CourseModule from '@UI/CourseModule/CourseModule';
 
 
 export default function Test(): ReactElement {
@@ -11,11 +12,10 @@ export default function Test(): ReactElement {
     return (
         <>
             <div className={styles.container}>
-                <ProgramLeaning/>
                 <br/>
                 <AdditionalModuleRed/>
                 <br/>
-                <AdditionalModuleBlack/>
+                <CourseModule title={'1 module'} items={['hello', 'hello', 'hello']}/>
             </div>
         </>
     );

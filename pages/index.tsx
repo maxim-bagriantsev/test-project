@@ -6,33 +6,28 @@ import ProgramLeaning from '@components/ProgramLeaning/ProgramLeaning';
 import { AdditionalModuleRed } from '@UI/AdditionalModuleRed/AdditionalModuleRed';
 import { AdditionalModuleBlack } from '@UI/AdditionalModuleBlack/AdditionalModuleBlack';
 import { useProductsQuery } from '@store/mba/api';
-import { useActions } from '@hooks/action';
+import CircularProgress from '@mui/material/CircularProgress';
+import Box from '@mui/material/Box';
 
 const cx = classNames.bind(styles);
 
+
 export default function MainPage(): ReactElement {
 
-  const { isLoading, isError, data } = useProductsQuery('');
-  const { getCourses } = useActions();
-  console.log(data)
-  // useEffect(() => {
-  //   getCourses(data)
-  //   console.log(data)
-  // }, []);
+  const { isLoading, isError, data: courses } = useProductsQuery('');
 
   return (
     <div className={cx('mainPage')}>
-
       <h1 className={cx('mainPage__title')}>Специализированные дисциплины</h1>
-      {isError && <p className=''>Что-то пошло не так!</p>}
-      <ProgramLeaning />
+      {isError && <p className={cx('mainPage__error')}>Что-то пошло не так!</p>}
+      {isLoading ? (<Box sx={{ display: 'flex' }}>
+        <CircularProgress />
+      </Box>) : <ProgramLeaning courses={courses} />}
 
       <div className={cx('mainPage__wrapperAdditionalModules')}>
         <AdditionalModuleRed />
         <AdditionalModuleBlack />
       </div>
-
-      <script type='text/javascript' src='' />
     </div>
   );
 }

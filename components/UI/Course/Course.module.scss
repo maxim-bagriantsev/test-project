@@ -8,12 +8,14 @@
     font-size: 26px;
     font-weight: 700;
     line-height: 31px;
+    margin-top: 70px;
     margin-bottom: 54px;
 
     @media screen and (max-width: $mobile) {
       font-size: 22px;
       font-weight: 700;
       line-height: 26px;
+      margin-top: 35px;
       margin-bottom: 27px;
     }
   }

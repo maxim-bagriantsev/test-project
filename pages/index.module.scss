@@ -15,17 +15,23 @@
     padding: 28px 15px 34px 15px;
   }
 
+  &__error {
+    font-size: 30px;
+    font-weight: 700;
+    color: $color-red;
+  }
+
   &__title {
     font-size: 36px;
     font-weight: 700;
     line-height: 43px;
-    margin-bottom: 90px;
+    margin-bottom: 20px;
 
     @media screen and (max-width: $mobile) {
       font-size: 28px;
       font-weight: 500;
       line-height: 33px;
-      margin-bottom: 35px;
+      margin-bottom: 0;
     }
   }
 

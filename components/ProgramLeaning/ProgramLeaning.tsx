@@ -1,23 +1,22 @@
-import React, {ReactElement} from 'react';
-import ModuleProgramLeaning from '@UI/ModuleProgramLeaning/ModuleProgrammLeaning';
-import styles from './ProgramLeaning.module.scss';
-import classNames from 'classnames/bind';
-
-const cx = classNames.bind(styles);
-
-export default function ProgramLeaning(): ReactElement {
-
-    return (
-        <div className={cx('programLeaning')}>
-            <h2 className={cx('programLeaning__title')}>Антикризисное управление</h2>
-            <div className={cx('programLeaning__wrapper')}>
-                <ModuleProgramLeaning/>
-                <ModuleProgramLeaning/>
-            </div>
-        </div>
-    );
-};
+import React, { ReactElement } from 'react';
+import { IProduct } from '../../models/models';
+import Course from '@UI/Course/Course';
 
 
+type ProgramLeaningType = {
+  courses: IProduct[] | undefined
+}
+
+export default function ProgramLeaning(props: ProgramLeaningType): ReactElement {
+  const { courses } = props;
+
+
+
+  return (
+    <>
+      {courses?.map((item, index) => <Course title={item.title} items={item.specializedSubjects.map(i => i.string)} key={index}/>)}
+    </>
+  );
+}
 
 
